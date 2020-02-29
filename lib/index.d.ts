@@ -12,7 +12,7 @@ export declare class PriorityQueue<T> {
     /***
      * Gets the top priority item from the Queue;
      */
-    GetHead(): T;
+    GetHead(): T | null;
 }
 export interface QueueItem<T> {
     Id: number;

@@ -4,7 +4,7 @@
   "description": "This is a simple priority queue implementation. This library is a stand-alone library and doesn't have any third-party dependecnies.",
   "main": "index.js",
   "scripts": {
-    "test": "npm-test",
+    "test": "jest --config jestconfig.json",
     "build": "tsc"
   },
   "repository": {

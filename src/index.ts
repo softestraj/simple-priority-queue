@@ -27,7 +27,9 @@ export class PriorityQueue<T> {
 
     let index = this.Queue.indexOf(
       this.Queue.reduce(function(prev, current) {
-        return prev.Priority < current.Priority ? prev : current;
+        return prev.Priority <= current.Priority && prev.Id <= current.Id
+          ? prev
+          : current;
       })
     );
 
@@ -37,12 +39,14 @@ export class PriorityQueue<T> {
   /***
    * Gets the top priority item from the Queue;
    */
-  public GetHead(): T {
+  public GetHead(): T | null {
+    if (this.Queue.length == 0) return null;
 
     return this.Queue.reduce(function(prev, current) {
-      return prev.Priority < current.Priority ? prev : current;
+      return prev.Priority <= current.Priority && prev.Id <= current.Id
+        ? prev
+        : current;
     }).Item;
-
   }
 }
 
