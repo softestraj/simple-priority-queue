@@ -5,6 +5,7 @@ This is a simple priority queue implementation written in Javascript. This libra
 If you are using this library in Javascript jus create an object of type PriorityQueue. If its Typescript then create an object by mentioning the type of data the Queue is about to store. For Example: If you want the Queue to store Foo, then pass the type Foo.
  
 JavaScript - `priortityQueue = new PriorityQueue();`
+
 TypeScript - `let priortityQueue: PriorityQueue<Foo> = new PriorityQueue<Foo>();`
 
 ## Enqueue an Item
